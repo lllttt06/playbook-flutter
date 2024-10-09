@@ -65,7 +65,7 @@ class SnapshotSupport {
                     of: find.byWidget(scrollable),
                     matching: find.byWidgetPredicate((widget) => true),
                   )
-                  .last
+                  .first
                   .evaluate()
                   .map(Scrollable.maybeOf)
                   .firstWhere((element) => element != null, orElse: () => null),
